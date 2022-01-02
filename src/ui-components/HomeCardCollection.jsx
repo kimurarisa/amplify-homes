@@ -28,7 +28,7 @@ export default function HomeCardCollection(props) {
       templateColumns="1fr 1fr 1fr"
       type="grid"
       alignItems="stretch"
-      justifyContent="stretch"
+      justifyContent="center"
       autoFlow="row"
       items={items || []}
       {...rest}

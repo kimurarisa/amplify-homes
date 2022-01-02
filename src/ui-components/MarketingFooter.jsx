@@ -106,10 +106,10 @@ export default function MarketingFooter(props) {
       >
         <Flex
           padding="0px 0px 0px 0px"
+          alignSelf="stretch"
           alignItems="flex-start"
           shrink="0"
           gap="1px"
-          width="545px"
           position="relative"
           justifyContent="flex-end"
           direction="row"

@@ -17,26 +17,42 @@ export default function HomeCard(props) {
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
       padding="0px 7px 0px 7px"
       backgroundColor="rgba(255,201.44999027252197,63.75,0.20000000298023224)"
-      overflow="hidden"
       alignItems="center"
+      justifyContent="center"
+      overflow="hidden"
       borderRadius="20px"
       gap="11px"
+      width="320px"
       position="relative"
-      justifyContent="center"
       direction="column"
+      height="282px"
       {...rest}
       {...getOverrideProps(overrides, "Flex")}
     >
-      <Image
+      <Flex
         padding="0px 0px 0px 0px"
         alignSelf="stretch"
+        overflow="hidden"
+        alignItems="center"
         shrink="0"
-        src={home?.image_url}
-        width="304px"
+        gap="10px"
         position="relative"
-        height="160px"
-        {...getOverrideProps(overrides, "Flex.Image[0]")}
-      ></Image>
+        direction="column"
+        height="199px"
+        {...getOverrideProps(overrides, "Flex.Flex[0]")}
+      >
+        <Image
+          padding="0px 0px 0px 0px"
+          alignSelf="stretch"
+          grow="1"
+          src={home?.image_url}
+          width="304px"
+          position="relative"
+          basis="199px"
+          height="199px"
+          {...getOverrideProps(overrides, "Flex.Flex[0].Image[0]")}
+        ></Image>
+      </Flex>
       <Flex
         padding="10px 9px 10px 9px"
         overflow="hidden"
@@ -47,7 +63,7 @@ export default function HomeCard(props) {
         position="relative"
         justifyContent="center"
         direction="column"
-        {...getOverrideProps(overrides, "Flex.Flex[0]")}
+        {...getOverrideProps(overrides, "Flex.Flex[1]")}
       >
         <Text
           padding="0px 0px 0px 0px"
@@ -65,7 +81,7 @@ export default function HomeCard(props) {
           fontWeight="700"
           direction="column"
           children={home?.address}
-          {...getOverrideProps(overrides, "Flex.Flex[0].Text[0]")}
+          {...getOverrideProps(overrides, "Flex.Flex[1].Text[0]")}
         ></Text>
         <Text
           padding="0px 0px 0px 0px"
@@ -83,7 +99,7 @@ export default function HomeCard(props) {
           fontWeight="400"
           direction="column"
           children={`${"Price: $"}${home?.price}${"/night"}`}
-          {...getOverrideProps(overrides, "Flex.Flex[0].Text[1]")}
+          {...getOverrideProps(overrides, "Flex.Flex[1].Text[1]")}
         ></Text>
       </Flex>
     </Flex>
