@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <NavBar width={"100vw"}/>
-      <HomeCardCollection isPaginated itemsPerPage={3}/>
+      <HomeCardCollection isPaginated itemsPerPage={6}/>
       <MarketingFooter width={"100vw"}/>
     </div>
   );

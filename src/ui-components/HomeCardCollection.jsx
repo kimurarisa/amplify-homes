@@ -36,7 +36,10 @@ export default function HomeCardCollection(props) {
     >
       {(item, index) => (
         <HomeCard
+          width="auto"
+          margin="10px 10px 10px 10px"
           home={item}
+          height="300px"
           key={item.id}
           {...getOverrideProps(overrides, "Collection.HomeCard[0]")}
         ></HomeCard>

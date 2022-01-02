@@ -21,7 +21,7 @@ export default function NavBar(props) {
   return (
     <Flex
       padding="24px 32px 24px 32px"
-      backgroundColor="rgba(255,255,255,1)"
+      backgroundColor="rgba(0,0,0,1)"
       alignItems="center"
       gap="20px"
       width="1440px"
@@ -55,7 +55,7 @@ export default function NavBar(props) {
         ></Icon>
         <Text
           padding="0px 0px 0px 0px"
-          color="rgba(0,0,0,1)"
+          color="rgba(255,255,255,1)"
           textAlign="left"
           shrink="0"
           display="flex"
@@ -85,7 +85,7 @@ export default function NavBar(props) {
       >
         <Text
           padding="0px 0px 0px 0px"
-          color="rgba(0,0,0,1)"
+          color="rgba(255,255,255,1)"
           textAlign="left"
           shrink="0"
           display="flex"
@@ -102,7 +102,7 @@ export default function NavBar(props) {
         ></Text>
         <Text
           padding="0px 0px 0px 0px"
-          color="rgba(0,0,0,1)"
+          color="rgba(255,255,255,1)"
           textAlign="left"
           shrink="0"
           display="flex"
@@ -119,7 +119,7 @@ export default function NavBar(props) {
         ></Text>
         <Text
           padding="0px 0px 0px 0px"
-          color="rgba(0,0,0,1)"
+          color="rgba(255,255,255,1)"
           textAlign="left"
           shrink="0"
           display="flex"
@@ -133,23 +133,6 @@ export default function NavBar(props) {
           direction="column"
           children="Applicants"
           {...getOverrideProps(overrides, "Flex.Flex[1].Text[2]")}
-        ></Text>
-        <Text
-          padding="0px 0px 0px 0px"
-          color="rgba(0,0,0,1)"
-          textAlign="left"
-          shrink="0"
-          display="flex"
-          letterSpacing="0.010000000000000009px"
-          justifyContent="flex-start"
-          fontFamily="Inter"
-          fontSize="16px"
-          lineHeight="24px"
-          position="relative"
-          fontWeight="400"
-          direction="column"
-          children="Company"
-          {...getOverrideProps(overrides, "Flex.Flex[1].Text[3]")}
         ></Text>
       </Flex>
       <Flex
