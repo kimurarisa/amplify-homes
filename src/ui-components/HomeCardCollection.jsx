@@ -13,20 +13,15 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import HomeCard from "./HomeCard";
 import { Collection } from "@aws-amplify/ui-react";
-import { SortDirection } from "@aws-amplify/datastore";
 export default function HomeCardCollection(props) {
   const { home, items: itemsProp, overrides: overridesProp, ...rest } = props;
   const overrides = { ...overridesProp };
-  const itemsPagination = {
-    sort: (s) => s.createdAt(SortDirection.DESCENDING),
-  };
   const items =
     itemsProp !== undefined
       ? itemsProp
       : useDataStoreBinding({
           type: "collection",
           model: Home,
-          pagination: itemsPagination,
         }).items;
   return (
     <Collection
@@ -41,10 +36,7 @@ export default function HomeCardCollection(props) {
     >
       {(item, index) => (
         <HomeCard
-          width="auto"
-          margin="10px 10px 10px 10px"
           home={item}
-          height="auto"
           key={item.id}
           {...getOverrideProps(overrides, "Collection.HomeCard[0]")}
         ></HomeCard>
