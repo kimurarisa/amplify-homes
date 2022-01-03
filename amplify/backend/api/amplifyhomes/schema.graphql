@@ -1,6 +1,14 @@
+type Wanted @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  reward: String
+  image_url: String
+}
+
 type Home @model @auth(rules: [{allow: public}]) {
   id: ID!
   address: String
   image_url: String
   price: Float
 }
+ 
