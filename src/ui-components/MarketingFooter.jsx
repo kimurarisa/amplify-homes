@@ -15,11 +15,10 @@ export default function MarketingFooter(props) {
     <Flex
       padding="40px 40px 40px 40px"
       backgroundColor="rgba(0,0,0,1)"
-      alignItems="flex-start"
       gap="0"
       width="1306px"
       position="relative"
-      direction="row"
+      direction="column"
       height="413px"
       {...rest}
       {...getOverrideProps(overrides, "Flex")}
@@ -29,6 +28,7 @@ export default function MarketingFooter(props) {
         overflow="hidden"
         shrink="0"
         gap="0"
+        width="471px"
         position="relative"
         direction="column"
         height="308px"
@@ -99,9 +99,9 @@ export default function MarketingFooter(props) {
         gap="5px"
         width="755px"
         position="relative"
-        basis="755px"
+        basis="25px"
         direction="column"
-        height="292px"
+        height="25px"
         {...getOverrideProps(overrides, "Flex.Flex[1]")}
       >
         <Flex

@@ -6,15 +6,15 @@
 
 /* eslint-disable */
 import React from "react";
-import { Home } from "../models";
 import {
   getOverrideProps,
   useDataStoreBinding,
 } from "@aws-amplify/ui-react/internal";
-import HomeCard from "./HomeCard";
+import WantedFooter from "./WantedFooter";
 import { Collection } from "@aws-amplify/ui-react";
-export default function NewHomes(props) {
-  const { home, items: itemsProp, overrides: overridesProp, ...rest } = props;
+import { Home } from "../models";
+export default function WantedFooterCollection(props) {
+  const { items: itemsProp, overrides: overridesProp, ...rest } = props;
   const overrides = { ...overridesProp };
   const items =
     itemsProp !== undefined
@@ -25,24 +25,18 @@ export default function NewHomes(props) {
         }).items;
   return (
     <Collection
-      templateColumns="1fr 1fr 1fr"
-      type="grid"
-      alignItems="stretch"
+      type="list"
       justifyContent="stretch"
-      autoFlow="row"
+      direction="column"
       items={items || []}
       {...rest}
       {...getOverrideProps(overrides, "Collection")}
     >
       {(item, index) => (
-        <HomeCard
-          width="auto"
-          margin="10px 10px 0px 0px"
-          home={item}
-          height="auto"
+        <WantedFooter
           key={item.id}
-          {...getOverrideProps(overrides, "Collection.HomeCard[0]")}
-        ></HomeCard>
+          {...getOverrideProps(overrides, "Collection.WantedFooter[0]")}
+        ></WantedFooter>
       )}
     </Collection>
   );

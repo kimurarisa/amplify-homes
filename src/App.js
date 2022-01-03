@@ -1,12 +1,12 @@
 import './App.css';
-import { HomeCardCollection, NavBar, MarketingFooter } from './ui-components'
+import { WantedCardCollection, WantedBar, WantedFooter } from './ui-components'
 
 function App() {
   return (
     <div className="App">
-      <NavBar width={"100vw"}/>
-      <HomeCardCollection isPaginated itemsPerPage={6}/>
-      <MarketingFooter width={"100vw"}/>
+      <WantedBar width={"100vw"} minWidth="1360px"/>
+      <WantedCardCollection isPaginated itemsPerPage={8}/>
+      <WantedFooter width={"100vw"} minWidth="1360px"/>
     </div>
   );
 }

@@ -13,9 +13,9 @@ export default function HomeCard(props) {
   const overrides = { ...overridesProp };
   return (
     <Flex
-      border="1px SOLID rgba(104.00000140070915,112.000000923872,120.00000044703484,1)"
+      border="3px SOLID rgba(104.00000140070915,112.000000923872,120.00000044703484,1)"
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
-      padding="0px 7px 0px 7px"
+      padding="0px 5px 0px 5px"
       backgroundColor="rgba(255,201.44999027252197,63.75,0.20000000298023224)"
       alignItems="center"
       justifyContent="center"

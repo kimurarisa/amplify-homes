@@ -4,8 +4,23 @@ import { ModelInit, MutableModel, PersistentModelConstructor } from "@aws-amplif
 
 
 
+type WantedMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
 type HomeMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+export declare class Wanted {
+  readonly id: string;
+  readonly name?: string;
+  readonly reward?: string;
+  readonly image_url?: string;
+  readonly createdAt?: string;
+  readonly updatedAt?: string;
+  constructor(init: ModelInit<Wanted, WantedMetaData>);
+  static copyOf(source: Wanted, mutator: (draft: MutableModel<Wanted, WantedMetaData>) => MutableModel<Wanted, WantedMetaData> | void): Wanted;
 }
 
 export declare class Home {
