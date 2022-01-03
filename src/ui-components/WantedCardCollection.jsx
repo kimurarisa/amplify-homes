@@ -13,15 +13,18 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import WantedCard from "./WantedCard";
 import { Collection } from "@aws-amplify/ui-react";
+import { SortDirection } from "@aws-amplify/datastore";
 export default function WantedCardCollection(props) {
   const { wanted, items: itemsProp, overrides: overridesProp, ...rest } = props;
   const overrides = { ...overridesProp };
+  const itemsPagination = { sort: (s) => s.image_url(SortDirection.ASCENDING) };
   const items =
     itemsProp !== undefined
       ? itemsProp
       : useDataStoreBinding({
           type: "collection",
           model: Wanted,
+          pagination: itemsPagination,
         }).items;
   return (
     <Collection

@@ -29,7 +29,7 @@ export default function WantedBar(props) {
         justifyContent="flex-start"
         fontFamily="Inter"
         top="4px"
-        left="41px"
+        left="40px"
         width="217px"
         fontSize="48px"
         lineHeight="56px"
@@ -37,7 +37,7 @@ export default function WantedBar(props) {
         fontWeight="700"
         direction="column"
         height="62px"
-        children="WANDED"
+        children="WANTED"
         {...getOverrideProps(overrides, "View.Text[0]")}
       ></Text>
     </View>
